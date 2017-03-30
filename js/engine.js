@@ -43,6 +43,7 @@ var Engine = (function(global) {
 
   function headerDown() {
     header.style.top = "0";
+    win.cancelAnimationFrame(animated);
   }
 
   /* This function serves as the kickoff point for the game loop itself
@@ -132,7 +133,6 @@ var Engine = (function(global) {
      * for that particular row of the game level.
      */
     var rowImages = [
-        //'images/water-block.png',   // Top row is water
         'images/grass-block.png', // Row 1 of 2 of grass
         'images/stone-block.png', // Row 1 of 3 of stone
         'images/stone-block.png', // Row 2 of 3 of stone
