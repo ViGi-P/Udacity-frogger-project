@@ -1,5 +1,6 @@
 /* global Resources, ctx */
 var enemyCount = 0;
+var timer = 0;
 
 window.EASY = {
   "num_enemies": 3,
@@ -213,9 +214,10 @@ Scoreboard.prototype.reset = function() {
   self.timeLeft = 30;
   self.winsEl.innerHTML = self.wins;
   self.timeLeftEl.innerHTML = self.timeLeft;
-  var timer = setInterval(function() {
+  if(timer !== 0) clearInterval(timer);
+  timer = setInterval(function() {
     self.timeLeftEl.innerHTML = --self.timeLeft;
-    if (self.timeLeft === 0) clearInterval(timer);
+    if (self.timeLeft < 1) clearInterval(timer);
   }, 1000);
 }
 

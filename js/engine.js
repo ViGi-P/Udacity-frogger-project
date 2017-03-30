@@ -43,7 +43,6 @@ var Engine = (function(global) {
 
   function headerDown() {
     header.style.top = "0";
-    win.cancelAnimationFrame(animated);
   }
 
   /* This function serves as the kickoff point for the game loop itself
