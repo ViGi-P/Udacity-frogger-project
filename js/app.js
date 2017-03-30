@@ -202,7 +202,8 @@ Scoreboard.prototype.win = function() {
 }
 
 Scoreboard.prototype.lose = function() {
-  this.timeLeftEl.innerHTML = this.timeLeft;
+  this.wins = this.wins<2 ? 0 : this.wins - 2;
+  this.winsEl.innerHTML = this.wins;
   player.reset();
 }
 
