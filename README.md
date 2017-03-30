@@ -3,7 +3,8 @@ frontend-nanodegree-arcade-game
 
 Running the game
 ----------------
-Visit the index.html file in your browser.
+Play the online game [here](https://vigi-p.github.io/Udacity-frogger-project/).
+To play locally, download or clone this repository and visit the index.html file in your browser.
 
 Playing the game
 ----------------
