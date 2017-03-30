@@ -1,0 +1,136 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  overflow: hidden;
+  font-family: "Chalkduster", "Helvetica Neue", sans-serif;
+  background: cyan;
+}
+
+header {
+  z-index: 10;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  background: mediumturquoise;
+  position: absolute;
+  transition: top 0.5s cubic-bezier(1, 0.15, 0.3, 1.02);
+  top: 0;
+}
+header h1 {
+  width: 100%;
+  margin: 50px auto 40px auto;
+  color: white;
+  text-transform: uppercase;
+}
+header > span {
+  color: white;
+}
+p {
+  max-width: 100%;
+  margin: 5px auto;
+}
+ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0 auto;
+}
+ul li {
+  display: inline-block;
+}
+ul li input[type=radio] {
+  visibility: hidden;
+}
+ul li input[type=radio]:checked + label > .select-anim {
+  background: white;
+  color: indianred;
+}
+table {
+  text-transform: uppercase;
+  margin: 45px 20px 0 0;
+  font-size: 32px;
+  color: white;
+  text-align: center;
+  background: indianred;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px black;
+  padding: 20px;
+  height: 450px;
+}
+.select-anim {
+  z-index: 0;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px black;
+  position: relative;
+  overflow: hidden;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 5px;
+  color: white;
+  background: indianred;
+  transition: all .15s linear;
+}
+.select-anim h2,
+.select-anim span,
+.select-anim img {
+  display: block;
+  margin: 3px auto;
+  z-index: 10;
+  position: relative;
+}
+.select-anim:before {
+  z-index: 5;
+  content: "";
+  position: absolute;
+  background: white;
+  top: 50%;
+  left: 50%;
+  padding: 10%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform .15s linear;
+}
+.select-anim:hover {
+  color: indianred;
+}
+.select-anim:hover:before {
+  transform: translate(-50%, -50%) scale(12);
+}
+#intro {
+  padding: 10px;
+  background: lightgreen;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px black;
+  max-width: 400px;
+  margin: auto;
+  font-family: monospace;
+}
+#home-buttons {
+  display: flex;
+  margin: auto;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+#home-buttons #start {
+  max-width: 100px;
+  margin-top: 50px;
+}
+#home-buttons #difficultyList {
+  width: 100%;
+}
+#gameArea {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+#replay {
+  max-width: 300px;
+  text-align: center;
+  margin: 10px auto;
+}
