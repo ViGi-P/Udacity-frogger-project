@@ -44,7 +44,7 @@ ul li input[type=radio] {
   visibility: hidden;
 }
 ul li input[type=radio]:checked + label > .select-anim {
-  background: black;
+  background: white;
   color: indianred;
 }
 table {
